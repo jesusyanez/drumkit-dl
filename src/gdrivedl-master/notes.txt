@@ -33,3 +33,13 @@ use gdown
 https://stackoverflow.com/questions/25010369/wget-curl-large-file-from-google-drive/39225039#39225039
 
 https://github.com/wkentaro/gdown
+
+
+
+
+add way to obfuscate requests
+    - dont get blocked
+
+['https://www.reddit.com/r/sports/', 'https://www.reddit.com/top/', 'https://www.reddit.com/r/funny/', 'https://www.reddit.com/r/leagueoflegends/', 'https://www.reddit.com/r/news/', 'https://www.reddit.com/r/MadeMeSmile/', 'https://www.reddit.com/r/canada/', 'https://www.reddit.com/r/AskReddit/', 'https://www.reddit.com/r/entertainment/', 'https://www.reddit.com/r/space/']
+
+['sports', 'funny', 'leagueoflegends', 'new', 'MadeMeSmile', 'canada', 'AskReddit', 'entertainment', 'space', 'technology', 'nodejs', 'gaming', 'unexpected', 'politics', 'PublicFreakout', 'movies', 'nba']
