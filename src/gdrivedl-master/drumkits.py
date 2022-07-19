@@ -82,7 +82,9 @@ for x in selected_list:
 
     elif 'file' in url_dict[int(x)]:
         print('Downloading [' + x + ']: ' + title_dict[int(x)])
-        output = './Drumkits/' + title_dict[int(x)] + '.zip'
+        # output = './Drumkits/' + title_dict[int(x)] + '.zip'
+        filtered_title = re.sub(r'[^\w]', ' ', title_dict[int(x)])
+        output = './Drumkits/' + filtered_title.replace(' ', '_') + '.zip'
         gdown.download(url=url_dict[int(x)], output=output, quiet=False, fuzzy=True)
 
     else: 
