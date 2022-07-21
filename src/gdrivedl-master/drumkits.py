@@ -4,26 +4,25 @@
 
 from get_time import right_now
 from urllib.request import urlopen
-import random
 import json
-import gdrivedl
 import os
+import termcolor
 import gdown
 import re
 
-print(r"""
-██████╗ ██████╗ ██╗   ██╗███╗   ███╗██╗  ██╗██╗████████╗███████╗      ██████╗ ██╗     
-██╔══██╗██╔══██╗██║   ██║████╗ ████║██║ ██╔╝██║╚══██╔══╝██╔════╝      ██╔══██╗██║     
-██║  ██║██████╔╝██║   ██║██╔████╔██║█████╔╝ ██║   ██║   ███████╗█████╗██║  ██║██║     
-██║  ██║██╔══██╗██║   ██║██║╚██╔╝██║██╔═██╗ ██║   ██║   ╚════██║╚════╝██║  ██║██║     
-██████╔╝██║  ██║╚██████╔╝██║ ╚═╝ ██║██║  ██╗██║   ██║   ███████║      ██████╔╝███████╗
-╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝      ╚═════╝ ╚══════╝
-                                                                                      
-
-
-Created for r/drumkits by Aesap (https://twitter.com/_aesap)
-
-""")
+# print(r"""
+#  _______                                     __        __    __            ________  __                                                             
+# |       \                                   |  \      |  \  |  \          |        \|  \                                                            
+# | $$$$$$$\  ______   __    __  ______ ____  | $$   __  \$$ _| $$_         | $$$$$$$$ \$$ _______    ______    _______   _______   ______    ______  
+# | $$  | $$ /      \ |  \  |  \|      \    \ | $$  /  \|  \|   $$ \        | $$__    |  \|       \  /      \  /       \ /       \ /      \  /      \ 
+# | $$  | $$|  $$$$$$\| $$  | $$| $$$$$$\$$$$\| $$_/  $$| $$ \$$$$$$        | $$  \   | $$| $$$$$$$\|  $$$$$$\|  $$$$$$$|  $$$$$$$|  $$$$$$\|  $$$$$$\
+# | $$  | $$| $$   \$$| $$  | $$| $$ | $$ | $$| $$   $$ | $$  | $$ __       | $$$$$   | $$| $$  | $$| $$    $$ \$$    \  \$$    \ | $$    $$| $$   \$$
+# | $$__/ $$| $$      | $$__/ $$| $$ | $$ | $$| $$$$$$\ | $$  | $$|  \      | $$      | $$| $$  | $$| $$$$$$$$ _\$$$$$$\ _\$$$$$$\| $$$$$$$$| $$      
+# | $$    $$| $$       \$$    $$| $$ | $$ | $$| $$  \$$\| $$   \$$  $$      | $$      | $$| $$  | $$ \$$     \|       $$|       $$ \$$     \| $$      
+#  \$$$$$$$  \$$        \$$$$$$  \$$  \$$  \$$ \$$   \$$ \$$    \$$$$        \$$       \$$ \$$   \$$  \$$$$$$$ \$$$$$$$  \$$$$$$$   \$$$$$$$ \$$      
+                                                                                                                                                    
+#                                                                   by RapGeek.io
+# """)
 # print('Created for r/drumkits by Aesap (https://twitter.com/_aesap)\n')
 
 # print('Last Update: ' + str(right_now()))
@@ -34,7 +33,20 @@ Created for r/drumkits by Aesap (https://twitter.com/_aesap)
 # fake_url = 'https://reddit.com/r/' + random.choice(obfuscate_list) + '/.json'
 # print('pinged: ' +fake_url)
 # fake_ping = urlopen(fake_url)
-
+print(termcolor.colored(r"""
+██████  ██████  ██    ██ ███    ███ ██   ██ ██ ████████ ██████  ██      
+██   ██ ██   ██ ██    ██ ████  ████ ██  ██  ██    ██    ██   ██ ██      
+██   ██ ██████  ██    ██ ██ ████ ██ █████   ██    ██    ██   ██ ██      
+██   ██ ██   ██ ██    ██ ██  ██  ██ ██  ██  ██    ██    ██   ██ ██      
+██████  ██   ██  ██████  ██      ██ ██   ██ ██    ██    ██████  ███████ 
+                                                                        
+                                                                                     
+                            by RapGeek.io
+""", "green"))
+print('███████████████████████████████████████████████████████████████████████')
+print('**************** Version 1.0 - Released: July 21, 2022 ****************')
+print('*********** Updates and feature requests: https://rapgeek.io **********')
+print('███████████████████████████████████████████████████████████████████████')
 
 # Get r/Drumkits json data
 url = "https://www.reddit.com/r/Drumkits/.json"
@@ -77,7 +89,7 @@ for x in selected_list:
         filtered_title = re.sub(r'[^\w]', ' ', title_dict[int(x)])
         output = './Drumkits/' + filtered_title.replace(' ', '_')
         # command = 'py gdrivedl.py ' + url + ' -P ' + title #windows
-        command = 'python3 gdrivedl.py ' + url_dict[int(x)] + ' -P ' + output #linux
+        command = 'python3 gdrivedl.py ' + url_dict[int(x)] + ' -P ' + output + ' -q' #linux
         os.system(command)
 
     elif 'file' in url_dict[int(x)]:
@@ -89,8 +101,6 @@ for x in selected_list:
 
     else: 
         print('The url for [' + x + ']: '+ url_dict[int(x)] + ' is messed up.')
-
-
 
 
 

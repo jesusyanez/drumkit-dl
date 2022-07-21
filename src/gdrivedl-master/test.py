@@ -41,9 +41,26 @@ title = './drumkit'
 url = 'https://drive.google.com/drive/folders/14PjpIRtPwvIInqngZoVJ1HTdMcHJfQNh?usp=sharing'
 
 # command = 'py gdrivedl.py ' + url + ' -P ' + title #windows
-command = 'python3 gdrivedl.py ' + url + ' -P ' + title #linux
-print(command)
-os.system(command)
+# command = 'python3 gdrivedl.py ' + url + ' -P ' + title #linux
+# print(command)
+# os.system(command)
+import termcolor
+# import os
+
+print(termcolor.colored(r"""
+██████  ██████  ██    ██ ███    ███ ██   ██ ██ ████████ ██████  ██      
+██   ██ ██   ██ ██    ██ ████  ████ ██  ██  ██    ██    ██   ██ ██      
+██   ██ ██████  ██    ██ ██ ████ ██ █████   ██    ██    ██   ██ ██      
+██   ██ ██   ██ ██    ██ ██  ██  ██ ██  ██  ██    ██    ██   ██ ██      
+██████  ██   ██  ██████  ██      ██ ██   ██ ██    ██    ██████  ███████ 
+                                                                        
+                                                                                     
+                            by RapGeek.io
+""", "green"))
+print('███████████████████████████████████████████████████████████████████████')
+print('**************** Version 1.0 - Released: July 21, 2022 ****************')
+print('*********** Updates and feature requests: https://rapgeek.io **********')
+print('███████████████████████████████████████████████████████████████████████')
 
 # os.system("py gdrivedl.py https://drive.google.com/drive/folders/1XVpJyWDIUHbmjbMHrU0OsNXeYy_RsupM?usp=sharing -P " + title)
 
@@ -63,6 +80,6 @@ os.system(command)
     # gdown.download(url=url, output=output, quiet=False, fuzzy=True)
 
 
-import zipfile
-with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
-    zip_ref.extractall(directory_to_extract_to)
+# import zipfile
+# with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
+#     zip_ref.extractall(directory_to_extract_to)
