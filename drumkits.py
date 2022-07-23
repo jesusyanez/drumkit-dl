@@ -2,37 +2,16 @@
 # It is limited to google drive link
 # Requirements: gdown
 
-from get_time import right_now
+from distutils.log import error
+# from get_time import right_now
 from urllib.request import urlopen
 import json
 import os
 import termcolor
 import gdown
 import re
+# import zipfile
 
-# print(r"""
-#  _______                                     __        __    __            ________  __                                                             
-# |       \                                   |  \      |  \  |  \          |        \|  \                                                            
-# | $$$$$$$\  ______   __    __  ______ ____  | $$   __  \$$ _| $$_         | $$$$$$$$ \$$ _______    ______    _______   _______   ______    ______  
-# | $$  | $$ /      \ |  \  |  \|      \    \ | $$  /  \|  \|   $$ \        | $$__    |  \|       \  /      \  /       \ /       \ /      \  /      \ 
-# | $$  | $$|  $$$$$$\| $$  | $$| $$$$$$\$$$$\| $$_/  $$| $$ \$$$$$$        | $$  \   | $$| $$$$$$$\|  $$$$$$\|  $$$$$$$|  $$$$$$$|  $$$$$$\|  $$$$$$\
-# | $$  | $$| $$   \$$| $$  | $$| $$ | $$ | $$| $$   $$ | $$  | $$ __       | $$$$$   | $$| $$  | $$| $$    $$ \$$    \  \$$    \ | $$    $$| $$   \$$
-# | $$__/ $$| $$      | $$__/ $$| $$ | $$ | $$| $$$$$$\ | $$  | $$|  \      | $$      | $$| $$  | $$| $$$$$$$$ _\$$$$$$\ _\$$$$$$\| $$$$$$$$| $$      
-# | $$    $$| $$       \$$    $$| $$ | $$ | $$| $$  \$$\| $$   \$$  $$      | $$      | $$| $$  | $$ \$$     \|       $$|       $$ \$$     \| $$      
-#  \$$$$$$$  \$$        \$$$$$$  \$$  \$$  \$$ \$$   \$$ \$$    \$$$$        \$$       \$$ \$$   \$$  \$$$$$$$ \$$$$$$$  \$$$$$$$   \$$$$$$$ \$$      
-                                                                                                                                                    
-#                                                                   by RapGeek.io
-# """)
-# print('Created for r/drumkits by Aesap (https://twitter.com/_aesap)\n')
-
-# print('Last Update: ' + str(right_now()))
-# print('Trending on https://reddit.com/r/drumkits at ' + right_now() +'\n\n')
-
-#Random request to avoid getting blocked by reddit
-# obfuscate_list = ['sports', 'funny', 'leagueoflegends', 'new', 'MadeMeSmile', 'canada', 'AskReddit', 'entertainment', 'space', 'technology', 'nodejs', 'gaming', 'unexpected', 'politics', 'PublicFreakout', 'movies', 'nba']
-# fake_url = 'https://reddit.com/r/' + random.choice(obfuscate_list) + '/.json'
-# print('pinged: ' +fake_url)
-# fake_ping = urlopen(fake_url)
 print(termcolor.colored(r"""
 ██████  ██████  ██    ██ ███    ███ ██   ██ ██ ████████ ██████  ██      
 ██   ██ ██   ██ ██    ██ ████  ████ ██  ██  ██    ██    ██   ██ ██      
@@ -41,11 +20,11 @@ print(termcolor.colored(r"""
 ██████  ██   ██  ██████  ██      ██ ██   ██ ██    ██    ██████  ███████ 
                                                                         
                                                                                      
-                            by RapGeek.io
+                            
 """, "green"))
-print('███████████████████████████████████████████████████████████████████████')
-print('**************** Version 1.0 - Released: July 21, 2022 ****************')
-print('*********** Updates and feature requests: https://rapgeek.io **********')
+
+print('                             Version 1.0.1                 ')
+
 print('███████████████████████████████████████████████████████████████████████')
 
 # Get r/Drumkits json data
@@ -83,6 +62,33 @@ selected_list = to_download_str.split(", ")
 # download function
 print('Now downloading ' + str(len(selected_list)) + ' drumkits. Check back in a 5 minutes.')
 
+
+# def extract(zipped_file, unzipped_file):
+
+#     print('extracting now')
+#     with zipfile.ZipFile(zipped_file, 'r') as zip_ref:
+#             zip_ref.extractall(unzipped_file)
+#             zip_ref.close()
+
+    
+    # os.remove(zipped_file)
+
+# import os, zipfile
+# def extract_all_and_delete(self):
+#     dir_name = './Drumkits/temp/'
+#     extension = ".zip"
+
+#     os.chdir(dir_name) # change directory from working dir to dir with files
+
+#     for item in os.listdir(dir_name): # loop through items in dir
+#         if item.endswith(extension): # check for ".zip" extension
+#             file_name = os.path.abspath(item) # get full path of files
+#             zip_ref = zipfile.ZipFile(file_name) # create zipfile object
+#             zip_ref.extractall(dir_name) # extract file to dir
+#             zip_ref.close() # close file
+#             os.remove(file_name) # delete zipped file
+
+
 for x in selected_list:
     if 'folder' in url_dict[int(x)]:
         print('Downloading [' + x + ']: ' + title_dict[int(x)])
@@ -94,23 +100,25 @@ for x in selected_list:
 
     elif 'file' in url_dict[int(x)]:
         print('Downloading [' + x + ']: ' + title_dict[int(x)])
-        # output = './Drumkits/' + title_dict[int(x)] + '.zip'
         filtered_title = re.sub(r'[^\w]', ' ', title_dict[int(x)])
-        output = './Drumkits/' + filtered_title.replace(' ', '_') + '.zip'
-        gdown.download(url=url_dict[int(x)], output=output, quiet=False, fuzzy=True)
+        output = './Drumkits/' + filtered_title.replace(' ', '_')
+        temp_output = './Drumkits/temp/' + filtered_title.replace(' ', '_') + '.zip'
+        print(output)
+        gdown.download(url=url_dict[int(x)], output=temp_output, quiet=False, fuzzy=True)
+        # extract(temp_output, output)
+        # with zipfile.ZipFile(temp_output, 'r') as zip_ref:
+        #     zip_ref.extractall(output)
+        # os.remove(temp_output) 
 
     else: 
         print('The url for [' + x + ']: '+ url_dict[int(x)] + ' is messed up.')
 
-
+# extract_all_and_delete(self)
 
                                                                       
 print(r"""
-██████   ██████  ██     ██ ███    ██ ██       ██████   █████  ██████  
-██   ██ ██    ██ ██     ██ ████   ██ ██      ██    ██ ██   ██ ██   ██ 
-██   ██ ██    ██ ██  █  ██ ██ ██  ██ ██      ██    ██ ███████ ██   ██ 
-██   ██ ██    ██ ██ ███ ██ ██  ██ ██ ██      ██    ██ ██   ██ ██   ██ 
-██████   ██████   ███ ███  ██   ████ ███████  ██████  ██   ██ ██████  
+███████████████████████████████████████████████████████████████████████ 
+
 
 
  ██████  ██████  ███    ███ ██████  ██      ███████ ████████ ███████ 

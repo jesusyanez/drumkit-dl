@@ -1,7 +1,0 @@
-curl -A 'random' -v https://www.reddit.com/r/Drumkits/.json | python -m json.tool
-	
-	[data][ups]
-	[data][title]
-	[data][domain] -- to check if it is g-drive or not
-	[data][url]
-	[data][permalink] -- in case people want to visit it
