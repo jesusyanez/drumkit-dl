@@ -1,8 +1,4 @@
 <div id="top"></div>
-<!-- PROJECT SHIELDS -->
-
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-
 <!-- PROJECT LOGO -->
 
 <div>
@@ -35,9 +31,10 @@
 r/Drumkits Downloader
 * Pick from trending posts on r/drumkits
 * Download multiple/**ALL** drumkits easily
-* Auto extract
+* Automatic extraction
 * Google Drive support
 * Python 3 compatible
+* Supports all operating systems
 
 
 
