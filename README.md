@@ -17,25 +17,27 @@
   </p>
 -->
 </div>
-<!--
-<div align="center">
-  <a href="https://jesusyanez.github.io/Techline/">
-    <img src="images/techline_screenshot.png" alt="Product Screenshot">
-  </a>
-</div>
--->
+
+
+
 
 <!-- ABOUT THE PROJECT -->
 
 
-r/Drumkits Downloader
+[r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
+* Python 3 compatible
 * Pick from trending posts on r/drumkits
 * Download multiple/**ALL** drumkits easily
 * Automatic extraction
 * Google Drive support
-* Python 3 compatible
 * Supports all operating systems
 
+### Screenshot Example
+<div align="center">
+  <a href="https://jesusyanez.github.io/Techline/">
+    <img src="screenshot.png" alt="Product Screenshot">
+  </a>
+</div>
 
 
 <!--
