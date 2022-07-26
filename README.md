@@ -26,7 +26,7 @@
 
 [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
 * Python 3 compatible
-* Pick from trending posts on r/drumkits
+* Pick and choose from trending posts on r/drumkits
 * Download multiple/**ALL** drumkits easily
 * Automatic extraction
 * Google Drive support
