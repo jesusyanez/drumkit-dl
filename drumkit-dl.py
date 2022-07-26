@@ -2,15 +2,15 @@
 # It is limited to google drive link
 # Requirements: gdown
 
-from distutils.log import error
-# from get_time import right_now
-from urllib.request import urlopen
-import json
 import os
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import requests
+import json
 import termcolor
-import gdown
-import re
-# import zipfile
+import gdrivedl
+import pathlib
+import zipfile
 
 print(termcolor.colored(r"""
 ██████  ██████  ██    ██ ███    ███ ██   ██ ██ ████████ ██████  ██      
@@ -18,20 +18,16 @@ print(termcolor.colored(r"""
 ██   ██ ██████  ██    ██ ██ ████ ██ █████   ██    ██    ██   ██ ██      
 ██   ██ ██   ██ ██    ██ ██  ██  ██ ██  ██  ██    ██    ██   ██ ██      
 ██████  ██   ██  ██████  ██      ██ ██   ██ ██    ██    ██████  ███████ 
-                                                                        
-                                                                                     
-                            
+                                                                                                                                                                                     
 """, "green"))
 
-print('                             Version 1.0.1                 ')
-
+print('                             Version 1.0                 ')
 print('███████████████████████████████████████████████████████████████████████')
 
 # Get r/Drumkits json data
-url = "https://www.reddit.com/r/Drumkits/.json"
-response = urlopen(url)
+main_url = "https://www.reddit.com/r/Drumkits/.json"
+response = urlopen(main_url)
 data_json = json.loads(response.read())
-
 
 # json data --> Print and make data structures
 def find_drumkits(kit):
@@ -62,61 +58,54 @@ selected_list = to_download_str.split(", ")
 # download function
 print('Now downloading ' + str(len(selected_list)) + ' drumkits. Check back in a 5 minutes.')
 
+def download_folder(url, output_folder, filename=None):
+    dl = gdrivedl.GDriveDL(quiet=False, overwrite=False, mtimes=False)
+    dl.process_url(url, output_folder, filename=None)
 
-# def extract(zipped_file, unzipped_file):
+def download_file(url, output_folder, filename):
+    dl = gdrivedl.GDriveDL(quiet=False, overwrite=False, mtimes=False)
+    dl.process_url(url, output_folder, filename)
 
-#     print('extracting now')
-#     with zipfile.ZipFile(zipped_file, 'r') as zip_ref:
-#             zip_ref.extractall(unzipped_file)
-#             zip_ref.close()
+def get_title(url):
+    reqs = requests.get(url)
+    soup = BeautifulSoup(reqs.text, 'html.parser')
+    for title in soup.find_all('title'):
+        return title.get_text()[:-15]
 
-    
-    # os.remove(zipped_file)
+def compression_type(file_name):
+    # function to return the file extension
+    file_extension = pathlib.Path(file_name).suffix
+    return file_extension
 
-# import os, zipfile
-# def extract_all_and_delete(self):
-#     dir_name = './Drumkits/temp/'
-#     extension = ".zip"
-
-#     os.chdir(dir_name) # change directory from working dir to dir with files
-
-#     for item in os.listdir(dir_name): # loop through items in dir
-#         if item.endswith(extension): # check for ".zip" extension
-#             file_name = os.path.abspath(item) # get full path of files
-#             zip_ref = zipfile.ZipFile(file_name) # create zipfile object
-#             zip_ref.extractall(dir_name) # extract file to dir
-#             zip_ref.close() # close file
-#             os.remove(file_name) # delete zipped file
-
+def unzip(zipped_file, unzipped_file):
+    if compression_type(zipped_file) == '.zip':
+        print('extracting now')
+        zip_path = './Drumkits/' + zipped_file
+        unzip_path = './Drumkits/' + unzipped_file
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall(unzip_path)
+                zip_ref.close()
+        os.remove(zip_path)
+    return
 
 for x in selected_list:
     if 'folder' in url_dict[int(x)]:
         print('Downloading [' + x + ']: ' + title_dict[int(x)])
-        filtered_title = re.sub(r'[^\w]', ' ', title_dict[int(x)])
-        output = './Drumkits/' + filtered_title.replace(' ', '_')
-        # command = 'py gdrivedl.py ' + url + ' -P ' + title #windows
-        command = 'python3 gdrivedl.py ' + url_dict[int(x)] + ' -P ' + output + ' -q' #linux
-        os.system(command)
+        output = get_title(url_dict[int(x)])
+        output_path = './Drumkits/' + output
+        download_folder(url_dict[int(x)], output_path)
 
     elif 'file' in url_dict[int(x)]:
         print('Downloading [' + x + ']: ' + title_dict[int(x)])
-        filtered_title = re.sub(r'[^\w]', ' ', title_dict[int(x)])
-        output = './Drumkits/' + filtered_title.replace(' ', '_')
-        temp_output = './Drumkits/temp/' + filtered_title.replace(' ', '_') + '.zip'
-        print(output)
-        gdown.download(url=url_dict[int(x)], output=temp_output, quiet=False, fuzzy=True)
-        # extract(temp_output, output)
-        # with zipfile.ZipFile(temp_output, 'r') as zip_ref:
-        #     zip_ref.extractall(output)
-        # os.remove(temp_output) 
+        temp_output = get_title(url_dict[int(x)])
+        output = temp_output.split('.', 1)[0]
+        download_file(url_dict[int(x)], './Drumkits', temp_output)
+        unzip(temp_output, output)
 
     else: 
-        print('The url for [' + x + ']: '+ url_dict[int(x)] + ' is messed up.')
-
-# extract_all_and_delete(self)
-
-                                                                      
-print(r"""
+        print('The url for [' + x + ']: '+ url_dict[int(x)] + ' is not supported, sorry.')
+                                                                 
+print(termcolor.colored(r"""
 ███████████████████████████████████████████████████████████████████████ 
 
 
@@ -129,6 +118,4 @@ print(r"""
                                                                      
                                                                      
 You may close this window.
-""")                             
-
-
+""", "green"))
