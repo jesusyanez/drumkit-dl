@@ -36,9 +36,6 @@
 * Mediafire Support
 * GUI
 
-## Download
-Windows .exe (Everything will download to the directory the exe is in.)
-
 
 ### Screenshot
 <div align="center">
