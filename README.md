@@ -30,11 +30,15 @@
 * Google Drive support
 * Python 3 compatible
 * Supports all operating systems
-## To-Do
-* RAR extraction
-* Dropbox Support
-* Mediafire Support
-* GUI
+## Roadmap
+- [X] RAR extraction
+- [X] Expand support
+  - [X] Dropbox
+  - [X] Mediafire
+  - [X] WeTransfer
+- [ ] GUI
+  - [X] General layout
+  - [ ] Reformat code logic to fit GUI code
 
 
 ### Screenshot
