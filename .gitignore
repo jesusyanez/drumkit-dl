@@ -2,15 +2,19 @@
 __pycache__/
 *.py[cod]
 *$py.class
-/dont_push
+
 # C extensions
 *.so
+
+other/
+/other/
+other
 
 # Distribution / packaging
 .Python
 build/
 develop-eggs/
-
+dist/
 downloads/
 eggs/
 .eggs/
@@ -109,6 +113,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+src/venv
+src/__pycache__
 
 # Spyder project settings
 .spyderproject
