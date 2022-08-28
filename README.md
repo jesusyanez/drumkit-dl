@@ -24,29 +24,36 @@
 <!-- ABOUT THE PROJECT -->
 
 
-[r/Drumkits](https://www.reddit.com/r/Drumkits/) Bulk Downloader
-* Download multiple drumkits easily
+[Reddit.com/r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
+* Single or bulk downloads
 * Automatic unzip
-* Google Drive support
-* Python 3 compatible
-* Supports all operating systems
+* Python 3
+* Supports all operating systems </br>
+
+### Supports links from:
+- [X] Google Drive
+- [X] Dropbox
+- [X] MediaFire
+- [X] WeTransfer
+
+## Screenshot
+<div align="center">
+  <a href="">
+    <img src="screenshot.png" alt="Product Screenshot">
+  </a>
+</div>
+
 ## Roadmap
 - [X] RAR extraction
 - [X] Expand support
   - [X] Dropbox
   - [X] Mediafire
   - [X] WeTransfer
-- [ ] GUI
+- [X] GUI
   - [X] General layout
-  - [ ] Reformat code logic to fit GUI code
+  - [X] Reformat code to work with GUI
 
 
-### Screenshot
-<div align="center">
-  <a href="https://jesusyanez.github.io/Techline/">
-    <img src="screenshot.png" alt="Product Screenshot">
-  </a>
-</div>
 
 
 <!--
