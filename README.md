@@ -30,7 +30,7 @@
 * Python 3
 * Supports all operating systems </br>
 
-### Supports links from:
+### Downloads from:
 - [X] Google Drive
 - [X] Dropbox
 - [X] MediaFire
