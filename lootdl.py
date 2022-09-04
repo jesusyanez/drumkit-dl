@@ -49,26 +49,28 @@ def get_title_mf(url):
 # Detects file compression type
 def compression_type(file_name):
     ext = os.path.splitext(file_name)[-1].lower()
-    print(ext)
     return ext
 
 # Uncompresses files and then deletes compressed folder
 def unzip(zipped_file, unzipped_file, directory):
-    if compression_type(zipped_file) == '.zip':
-        zip_path = directory + zipped_file
-        unzip_path = directory + unzipped_file
-        print('--> Extracting to: ' + unzip_path)
-        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(unzip_path)
-                zip_ref.close()
-        os.remove(zip_path)
-    if compression_type(zipped_file) == '.rar':
-        zip_path = directory + zipped_file
-        unzip_path = directory + unzipped_file
-        print('---> Extracting to: ' + unzip_path)
-        patoolib.extract_archive(zip_path, outdir=directory)
-        os.remove(zip_path)
-    return
+    try:
+        if compression_type(zipped_file) == '.zip':
+            zip_path = directory + zipped_file
+            unzip_path = directory + unzipped_file
+            print('--> Extracting to: ' + unzip_path)
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                    zip_ref.extractall(unzip_path)
+                    zip_ref.close()
+            os.remove(zip_path)
+        if compression_type(zipped_file) == '.rar':
+            zip_path = directory + zipped_file
+            unzip_path = directory + unzipped_file
+            print('---> Extracting to: ' + unzip_path)
+            patoolib.extract_archive(zip_path, outdir=directory)
+            os.remove(zip_path)
+        return
+    except:
+        print("Extraction process failed")
 
 # Download from Google Drive
 def gd_download(url, directory):
@@ -93,8 +95,6 @@ def db_download(url, directory):
     print(file_name)
     suffix1 = file_name.endswith(".zip")
     suffix2 = file_name.endswith(".rar")
-    print(suffix1)
-    print(suffix2)
     if not suffix1 and not suffix2:
         file_name = file_name + ".zip"
     dl_url = url[:-1] + '1'

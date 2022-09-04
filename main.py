@@ -16,8 +16,6 @@ def my_fun():
     print(my_dir)
     l1.config(text=my_dir) # update the text of Label with directory path
 
-
-
 def select():
     curItems = tree.selection()
     list = []
@@ -28,6 +26,7 @@ def select():
     path = my_dir + '/'
     for url in list[0]:
         lootdl.grab(url, path)
+    print("All downloads complete.")
 
 root = tk.Tk()
 root.title('Audio Scene - Drumkit Downloader')
