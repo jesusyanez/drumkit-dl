@@ -12,6 +12,11 @@
   <p align="center">
   <h1>Drumkit-DL</h1>
  
+<div align="center">
+  <a href="">
+    <img src="screenshot.png" alt="Product Screenshot">
+  </a>
+</div>
 <!--
     <p><a href="https://jesusyanez.github.io/Techline/"><strong>Windows Download »</strong></a> * <a href="https://jesusyanez.github.io/Techline/"><strong>Linux Download »</strong></a></p>
   </p>
@@ -24,11 +29,13 @@
 <!-- ABOUT THE PROJECT -->
 
 
-[Reddit.com/r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
-* Single or bulk downloads
-* Automatic unzip
-* Python 3
-* Supports all operating systems </br>
+The [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
+* Download one of multiple drumkits
+* Automatic file unzipping
+* Downloads to selected folder
+* Supports all operating systems
+* Made with Python 3</br>
+
 
 ### Downloads from:
 - [X] Google Drive
@@ -36,12 +43,9 @@
 - [X] MediaFire
 - [X] WeTransfer
 
-## Screenshot
-<div align="center">
-  <a href="">
-    <img src="screenshot.png" alt="Product Screenshot">
-  </a>
-</div>
+## Install
+### Download windows exe
+### Alternative - Run from source
 
 ## Roadmap
 - [X] RAR extraction
