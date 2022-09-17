@@ -56,6 +56,7 @@ The [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
 - [X] GUI
   - [X] General layout
   - [X] Reformat code to work with GUI
+- [ ] Easy to install .EXE
 
 
 
