@@ -10,7 +10,9 @@
 
 
   <p align="center">
-  <h1>Drumkit-DL</h1>
+  <h1>Drumkits Pro</h1>
+  
+  The Only [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
  
 <div align="center">
   <a href="">
@@ -29,7 +31,8 @@
 <!-- ABOUT THE PROJECT -->
 
 
-The [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
+<h2>Features</h2>
+
 * Download one of multiple drumkits
 * Automatic file unzipping
 * Downloads to selected folder
