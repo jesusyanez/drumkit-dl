@@ -46,9 +46,6 @@
 - [X] MediaFire
 - [X] WeTransfer
 
-## Install
-### Download windows exe
-### Alternative - Run from source
 
 ## Roadmap
 - [X] RAR extraction
