@@ -56,7 +56,7 @@
 - [X] GUI
   - [X] General layout
   - [X] Reformat code to work with GUI
-- [ ] Easy to install .EXE
+- [ ] License software for distribution
 
 
 
