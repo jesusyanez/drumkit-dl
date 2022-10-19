@@ -10,9 +10,9 @@
 
 
   <p align="center">
-  <h1>Drumkits Pro</h1>
+  <h1>Drumkit-DL Pro</h1>
   
-  The Only [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader
+  The [Drumkit](https://www.reddit.com/r/Drumkits/) Downloader
  
 <div align="center">
   <a href="">
@@ -33,14 +33,19 @@
 
 <h2>Features</h2>
 
-* Download one of multiple drumkits
-* Automatic file unzipping
-* Downloads to selected folder
+<h3>Download</h3>
+
+* Queue up to 25 drumkits
+* Select downloads folder
+* Unzips .zip & .rar files
+
+<h4></h4>
+
 * Supports all operating systems
 * Made with Python 3</br>
 
 
-### Downloads from:
+### Services supported:
 - [X] Google Drive
 - [X] Dropbox
 - [X] MediaFire
