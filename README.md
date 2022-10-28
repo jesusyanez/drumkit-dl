@@ -10,7 +10,7 @@
 
 
   <p align="center">
-  <h1>Drumkit-DL Pro</h1>
+  <h1>Drumkit Pro</h1>
   
   The [Drumkit](https://www.reddit.com/r/Drumkits/) Downloader
  
@@ -33,16 +33,11 @@
 
 <h2>Features</h2>
 
-<h3>Download</h3>
-
-* Queue up to 25 drumkits
-* Select downloads folder
-* Unzips .zip & .rar files
-
-<h4></h4>
-
+* Download up to 25 of the latest trending drumkits with one click
+* Choose a custom folder for your drumkit downloads
+* Automatically extracts and removes compressed files
 * Supports all operating systems
-* Made with Python 3</br>
+* Python 3</br>
 
 
 ### Services supported:
