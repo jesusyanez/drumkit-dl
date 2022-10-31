@@ -12,7 +12,7 @@
   <p align="center">
   <h1>Drumkit Pro</h1>
   
-  The [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader - Why download and extract drumkits 1 by 1 when Drumkit Pro can do 25 at a time?
+  The [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader - Why download and extract drumkits 1 by 1, when Drumkit Pro can do 25 at a time?
  
 <div align="center">
   <a href="">
