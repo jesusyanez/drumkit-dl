@@ -12,7 +12,7 @@
   <p align="center">
   <h1>Drumkit Pro</h1>
   
-  The [Drumkit](https://www.reddit.com/r/Drumkits/) Downloader
+  The [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader - Why download and extract drumkits 1 by 1 when Drumkit Pro can do 25 at a time?
  
 <div align="center">
   <a href="">
@@ -33,10 +33,10 @@
 
 <h2>Features</h2>
 
-* Download up to 25 of the latest trending drumkits with one click
-* Choose a custom folder for your drumkit downloads
-* Automatically extracts and removes compressed files
-* Supports all operating systems
+* Download up to 25 of the latest trending drumkits with one button
+* Choose a custom drumkit downloads location
+* All drumkits are automatically extracted
+* Works on all operating systems
 * Python 3</br>
 
 
