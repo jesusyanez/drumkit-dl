@@ -35,7 +35,7 @@
 
 * Download up to 25 of the latest trending drumkits with one button
 * Choose a custom download location
-* All drumkits are automatically extracted
+* Automatically extracts folders
 * Works on all operating systems
 * Python 3</br>
 
