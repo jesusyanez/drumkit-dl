@@ -35,14 +35,10 @@
 * Single or multiple drumkit downloads
 * Custom download location
 * Automatic extraction
+* Downloads from Google Drive, Dropbox, MediaFire, and WeTransfer
 * Python 3 (all operating systems)</br>
 
 
-### Downloads from:
-✅ Google Drive <br>
-✅ Dropbox <br>
-✅ MediaFire <br>
-✅ WeTransfer <br>
 
 
 ## Roadmap
