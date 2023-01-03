@@ -10,9 +10,8 @@
 
 
   <p align="center">
-  <h1>Drumkit Pro</h1>
+  <h1>Drumkit-DL</h1>
   
-  The  ONLY [r/Drumkits](https://www.reddit.com/r/Drumkits/) Downloader. <br> Why download drumkits one by one, when Drumkit Pro can do 25? 😎
  
 <div align="center">
   <a href="">
@@ -33,14 +32,13 @@
 
 <h2>Features</h2>
 
-* Download up to 25 of the latest trending drumkits with one button
-* Choose a custom download location
-* Automatically extracts folders
-* Works on all operating systems
-* Python 3</br>
+* Single or multiple drumkit downloads
+* Custom download location
+* Automatic extraction
+* Python 3 (all operating systems)</br>
 
 
-### Services supported:
+### Downloads from:
 ✅ Google Drive <br>
 ✅ Dropbox <br>
 ✅ MediaFire <br>
