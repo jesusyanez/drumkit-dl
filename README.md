@@ -10,7 +10,7 @@
 
 
   <p align="center">
-  <h1>Drumkit-DL</h1>
+  <h1>drumkit-dl</h1>
   
  
 <div align="center">
@@ -30,10 +30,10 @@
 <!-- ABOUT THE PROJECT -->
 
 
-<h2>Features</h2>
+<h2>Drumkit DL's Features</h2>
 
-* Single or multiple drumkit downloads
-* Custom download location
+* Add multiple drumkits to download queue.
+* Let's users choose a custom directory to download drumkits to.
 * Automatic extraction
 * Downloads from Google Drive, Dropbox, MediaFire, and WeTransfer
 * Python 3 (all operating systems)</br>
