@@ -32,10 +32,10 @@
 
 <h2>Drumkit DL's Features</h2>
 
-* Add multiple drumkits to download queue.
+* Download multiple drumkits without using a web browser.
 * Let's users choose a custom directory to download drumkits to.
 * Automatic extraction
-* Downloads from Google Drive, Dropbox, MediaFire, and WeTransfer
+* Works with files hosted on Google Drive, Dropbox, MediaFire, and WeTransfer.
 * Python 3 (all operating systems)</br>
 
 
