@@ -15,7 +15,7 @@
  
 <div align="center">
   <a href="">
-    <img src="screenshot.png" alt="Product Screenshot">
+    <img src="https://raw.githubusercontent.com/jesusyanez/example-images/main/drumkitdl.png" alt="Product Screenshot">
   </a>
 </div>
 <!--
@@ -32,11 +32,11 @@
 
 <h2>Drumkit DL's Features</h2>
 
-* Download multiple drumkits without using a web browser.
-* Let's users choose a custom directory to download drumkits to.
-* Automatic extraction
-* Works with files hosted on Google Drive, Dropbox, MediaFire, and WeTransfer.
-* Python 3 (all operating systems)</br>
+* Download back-to-back drumkits without opening a single tab.
+* Custom download directory for all your drumkits, no more moving folders around.
+* All downloaded files are extracted automatically, so drumkits are ready to go.
+* Supports Google Drive, Dropbox, MediaFire, and WeTransfer.
+* Runs on Python 3 (all operating systems).</br>
 
 
 
