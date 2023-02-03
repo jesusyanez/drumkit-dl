@@ -10,7 +10,7 @@
 
 
   <p align="center">
-  <h1>drumkit-dl</h1>
+  <h1>Drum Pro</h1>
   
  
 <div align="center">
@@ -30,7 +30,7 @@
 <!-- ABOUT THE PROJECT -->
 
 
-<h2>Drumkit DL's Features</h2>
+<h2>Drum Pro's Features</h2>
 
 * Download back-to-back drumkits without opening a single tab.
 * Custom download directory for all your drumkits, no more moving folders around.
