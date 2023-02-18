@@ -14,9 +14,19 @@
   
  
 <div align="center">
+
+  ### Windows
+  
+  <a href="">
+    <img src="https://github.com/jesusyanez/drum-pro/blob/main/screenshot.png?raw=true" alt="Product Screenshot">
+  </a>
+  
+  ### Linux (Pop!_OS)
+  
   <a href="">
     <img src="https://raw.githubusercontent.com/jesusyanez/example-images/main/drumkitdl.png" alt="Product Screenshot">
   </a>
+  
 </div>
 <!--
     <p><a href="https://jesusyanez.github.io/Techline/"><strong>Windows Download »</strong></a> * <a href="https://jesusyanez.github.io/Techline/"><strong>Linux Download »</strong></a></p>
