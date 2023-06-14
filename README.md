@@ -10,7 +10,7 @@
 
 
   <p align="center">
-  <h1>Drum Pro</h1>
+  <h1>Drumkit Downloader</h1>
   
  
 <div align="center">
@@ -21,7 +21,7 @@
     <img src="https://github.com/jesusyanez/drum-pro/blob/main/screenshot.png?raw=true" alt="Product Screenshot">
   </a>
   
-  ### Linux (Pop!_OS)
+  ### Linux
   
   <a href="">
     <img src="https://raw.githubusercontent.com/jesusyanez/example-images/main/drumkitdl.png" alt="Product Screenshot">
