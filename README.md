@@ -52,14 +52,9 @@
 
 
 ## Roadmap
-- [X] RAR extraction
-- [X] Expand support
-  - [X] Dropbox
-  - [X] Mediafire
-  - [X] WeTransfer
-- [X] GUI
-  - [X] General layout
-  - [X] Reformat code to work with GUI
+- [X] ZIP & RAR extraction
+- [X] Expand support - Google Drive | DropBox | MediaFire | WeTransfer
+- [X] GUI added
 - [ ] Release .exe
 
 
