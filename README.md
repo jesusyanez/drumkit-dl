@@ -42,8 +42,8 @@
 
 <h2>Drum Pro's Features</h2>
 
-* Download back-to-back drumkits without opening a single tab.
-* Custom download directory for all your drumkits, no more moving folders around.
+* Download multiple drumkits.
+* Extract all to one folder.
 * All downloaded files are extracted automatically, so drumkits are ready to go.
 * Supports Google Drive, Dropbox, MediaFire, and WeTransfer.
 * Runs on Python 3 (all operating systems).</br>
