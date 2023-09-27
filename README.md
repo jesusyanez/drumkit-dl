@@ -10,7 +10,7 @@
 
 
   <p align="center">
-  <h1>Drumkit Downloader</h1>
+  <h1>Drumkit-DL</h1>
   
  
 <div align="center">
